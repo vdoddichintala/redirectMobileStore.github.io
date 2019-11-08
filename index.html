@@ -1,0 +1,21 @@
+
+<script>
+	let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+	if (isMobile) {
+	   let userAgent = navigator.userAgent || navigator.vendor;
+		//if (/windows phone/i.test(userAgent)) {
+		//console.log(userAgent);
+		//window.open(AppConstants.iosDownloadLink);
+		//}
+		if (/Android/i.test(userAgent)) {
+		//window.open('https://play.google.com/store/apps/details?id=com.svd.up');
+		location.href = 'https://play.google.com/store/apps/details?id=com.svd.up';
+		}
+		if (/iPad|iPhone|iPod/i.test(userAgent)) {
+		//window.open('https://apps.apple.com/us/app/industrial-equipment-service/id1308328999');
+		location.href = 'https://apps.apple.com/us/app/industrial-equipment-service/id1308328999';
+		}
+	} else {
+		location.href = 'https://app.theupapp.com/welcome-screen';
+	}
+</script>
